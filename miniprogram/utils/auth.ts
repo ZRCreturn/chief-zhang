@@ -35,7 +35,7 @@ export const mockLogin = async (code: string): Promise<LoginResponse> => {
     await delay(mockConfig.mockDelay);
 
     // 模拟登录成功
-    const user = mockUsers[0]; // 默认使用第一个用户
+    const user = mockUsers[1]; // 默认使用第一个用户
     return {
       token: 'mock-jwt-token-' + Date.now(),
       userInfo: user

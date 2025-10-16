@@ -39,20 +39,23 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### 项目结构
 ```
 miniprogram/              # 微信小程序前端
-├── app.ts               # 应用入口
-├── app.json             # 应用配置
+├── app.ts               # 应用入口 ✅ 已完成
+├── app.json             # 应用配置 ✅ 已完成
 ├── app.wxss             # 全局样式
 ├── pages/               # 页面组件
-│   ├── home/            # 首页（菜品展示+购物车）
-│   ├── add-dish/        # 添加菜品页
-│   └── profile/         # 个人中心页
+│   ├── login/           # 登录页面 ✅ 已完成
+│   ├── index/           # 首页（菜品展示+购物车）✅ 已完成
+│   ├── profile/         # 个人中心页 ✅ 已完成
+│   └── logs/            # 日志页面（模板自带）
 └── utils/               # 工具函数
+    ├── auth.ts          # 认证工具 ✅ 已完成
+    └── storage.ts       # 存储工具 ✅ 已完成
 
 typings/                  # TypeScript类型定义
-├── index.d.ts           # 自定义类型定义
+├── index.d.ts           # 自定义类型定义 ✅ 已完成
 └── types/               # 微信API类型定义
 
-backend/                  # Spring Boot后端（建议新建目录）
+backend/                  # Spring Boot后端（待开发）
 ├── src/main/java/
 │   └── com/privatechef/
 │       ├── controller/   # API控制器
