@@ -1,27 +1,74 @@
-<!--index.wxml-->
-<scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
+<!-- 首页 -->
+<view class="home-container">
+  <!-- 顶部欢迎区域 -->
+  <view class="welcome-section">
+    <view class="welcome-text">
+      <text class="greeting">你好，{{userInfo ? userInfo.nickname : '宝贝'}}！</text>
+      <text class="subtitle">今天想吃什么？</text>
     </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
+    <view class="user-avatar">
+      <text class="avatar-text" wx:if="{{userInfo && userInfo.role === 'chef'}}">大厨</text>
+      <text class="avatar-text" wx:else>宝贝</text>
     </view>
   </view>
-</scroll-view>
+
+  <!-- 菜品展示区域 -->
+  <view class="dishes-section">
+    <view class="section-header">
+      <text class="section-title">私厨菜单</text>
+      <button class="add-dish-btn" bindtap="goToAddDish" size="mini">+ 添加菜品</button>
+    </view>
+
+    <view class="dishes-grid">
+      <view class="dish-card" wx:for="{{dishes}}" wx:key="id" bindtap="addToCart" data-dish="{{item}}">
+        <view class="dish-image">
+          <text class="dish-text">{{item.name}}</text>
+        </view>
+        <view class="dish-info">
+          <text class="dish-name">{{item.name}}</text>
+          <text class="dish-desc">{{item.description}}</text>
+          <view class="dish-meta">
+            <text class="dish-time">{{item.prepTime}}分钟</text>
+            <text class="dish-difficulty" wx:if="{{item.difficulty === 'easy'}}">简单</text>
+            <text class="dish-difficulty" wx:elif="{{item.difficulty === 'medium'}}">中等</text>
+            <text class="dish-difficulty" wx:else>复杂</text>
+          </view>
+          <view class="dish-actions">
+            <text class="add-btn">+ 加入菜单</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 购物车浮层 -->
+  <view class="cart-overlay" wx:if="{{showCart}}" bindtap="toggleCart">
+    <view class="cart-panel" catchtap="">
+      <view class="cart-header">
+        <text class="cart-title">今日菜单 ({{selectedDishes.length}})</text>
+        <text class="close-btn" bindtap="toggleCart">×</text>
+      </view>
+
+      <view class="cart-items">
+        <view class="cart-item" wx:for="{{selectedDishes}}" wx:key="id">
+          <text class="item-name">{{item.name}}</text>
+          <text class="item-quantity">×{{item.quantity}}</text>
+        </view>
+      </view>
+
+      <view class="cart-footer">
+        <view class="total-price">
+          <text class="price-label">预估食材:</text>
+          <text class="price-value">¥{{totalPrice}}</text>
+        </view>
+        <button class="confirm-btn" bindtap="confirmOrder">确认点餐</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部购物车按钮 -->
+  <view class="floating-cart" wx:if="{{selectedDishes.length > 0 && !showCart}}" bindtap="toggleCart">
+    <view class="cart-badge">{{selectedDishes.length}}</view>
+    <text class="cart-text">购物车</text>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<!-- 登录页面 -->
+<view class="login-container">
+  <!-- 应用标题 -->
+  <view class="app-header">
+    <view class="app-title">私厨点餐</view>
+    <view class="app-subtitle">为爱下厨，用心点餐</view>
+  </view>
+
+  <!-- 登录区域 -->
+  <view class="login-area">
+    <!-- 微信登录按钮 -->
+    <button
+      class="login-btn wechat-btn"
+      bindtap="onWechatLogin"
+      loading="{{isLoading}}"
+      disabled="{{isLoading}}"
+    >
+      <text class="btn-text">微信一键登录</text>
+    </button>
+
+    <!-- 错误提示 -->
+    <view class="error-tip" wx:if="{{loginError}}">
+      {{loginError}}
+    </view>
+
+    <!-- 游客模式 -->
+    <view class="guest-section">
+      <text class="guest-text">或</text>
+      <button
+        class="guest-btn"
+        bindtap="onGuestMode"
+        plain
+      >
+        游客模式体验
+      </button>
+    </view>
+  </view>
+
+  <!-- 底部说明 -->
+  <view class="footer">
+    <text class="footer-text">登录即代表同意用户协议和隐私政策</text>
+  </view>
+</view>

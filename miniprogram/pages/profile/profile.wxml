@@ -1,0 +1,78 @@
+<!-- 个人中心页面 -->
+<view class="profile-container">
+  <!-- 用户信息区域 -->
+  <view class="user-section">
+    <view class="user-header">
+      <view class="user-avatar">
+        <text class="avatar-text" wx:if="{{userInfo && userInfo.role === 'chef'}}">大厨</text>
+        <text class="avatar-text" wx:else>宝贝</text>
+      </view>
+      <view class="user-info">
+        <view class="user-nickname" wx:if="{{!isEditing}}">
+          <text>{{userInfo ? userInfo.nickname : '未设置昵称'}}</text>
+          <text class="user-role" wx:if="{{userInfo && userInfo.role === 'chef'}}">大厨</text>
+          <text class="user-role" wx:else>宝贝</text>
+          <button class="edit-btn" bindtap="onStartEdit" size="mini">编辑</button>
+        </view>
+        <view class="edit-nickname" wx:else>
+          <input
+            class="nickname-input"
+            value="{{editNickname}}"
+            placeholder="请输入昵称"
+            bindinput="onNicknameInput"
+            maxlength="20"
+          />
+          <button class="save-btn" bindtap="onSaveNickname" size="mini">保存</button>
+          <button class="cancel-btn" bindtap="onCancelEdit" size="mini">取消</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 核心数据区域 -->
+  <view class="stats-section">
+    <view class="section-title">核心数据</view>
+    <view class="stats-grid">
+      <view class="stat-item">
+        <text class="stat-number">{{statistics.totalDishes}}</text>
+        <text class="stat-label">已掌握</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-number">{{statistics.weeklyOrders}}</text>
+        <text class="stat-label">本周点餐</text>
+      </view>
+      <view class="stat-item">
+        <text class="stat-number">{{statistics.learningProgress}}%</text>
+        <text class="stat-label">学习进度</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 热门菜品区域 -->
+  <view class="popular-section">
+    <view class="section-title">热门菜品</view>
+    <view class="dish-list">
+      <view class="dish-item" wx:for="{{popularDishes}}" wx:key="name">
+        <text class="dish-rank">{{index + 1}}</text>
+        <text class="dish-name">{{item.name}}</text>
+        <text class="dish-count">{{item.count}}次</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 成就徽章区域 -->
+  <view class="achievement-section">
+    <view class="section-title">成就徽章</view>
+    <view class="achievement-list">
+      <view class="achievement-item" wx:for="{{achievements}}" wx:key="*this">
+        <text class="achievement-text">{{item}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作区域 -->
+  <view class="action-section">
+    <button class="logout-btn" bindtap="onLogout">退出登录</button>
+    <button class="clear-btn" bindtap="onClearData">清除数据</button>
+  </view>
+</view>

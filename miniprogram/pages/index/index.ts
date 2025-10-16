@@ -1,54 +1,144 @@
-// index.ts
-// 获取应用实例
-const app = getApp<IAppOption>()
-const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+// 首页
+import { getDishes } from '../../utils/storage';
+
+const app = getApp<IAppOption>();
 
 Component({
   data: {
-    motto: 'Hello World',
-    userInfo: {
-      avatarUrl: defaultAvatarUrl,
-      nickName: '',
-    },
-    hasUserInfo: false,
-    canIUseGetUserProfile: wx.canIUse('getUserProfile'),
-    canIUseNicknameComp: wx.canIUse('input.type.nickname'),
+    userInfo: null as UserInfo | null,
+    dishes: [] as any[],
+    selectedDishes: [] as any[],
+    showCart: false,
+    totalPrice: 0
   },
+
+  lifetimes: {
+    attached() {
+      this.loadUserInfo();
+      this.loadDishes();
+    }
+  },
+
+  pageLifetimes: {
+    show() {
+      // 页面显示时重新加载用户信息
+      this.loadUserInfo();
+    }
+  },
+
   methods: {
-    // 事件处理函数
-    bindViewTap() {
-      wx.navigateTo({
-        url: '../logs/logs',
-      })
+    // 加载用户信息
+    loadUserInfo() {
+      if (app.globalData.userInfo) {
+        this.setData({
+          userInfo: app.globalData.userInfo
+        });
+      }
     },
-    onChooseAvatar(e: any) {
-      const { avatarUrl } = e.detail
-      const { nickName } = this.data.userInfo
+
+    // 加载菜品数据
+    loadDishes() {
+      const dishes = getDishes();
       this.setData({
-        "userInfo.avatarUrl": avatarUrl,
-        hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
-      })
+        dishes
+      });
     },
-    onInputChange(e: any) {
-      const nickName = e.detail.value
-      const { avatarUrl } = this.data.userInfo
+
+    // 添加菜品到购物车
+    addToCart(e: any) {
+      const { dish } = e.currentTarget.dataset;
+      const selectedDishes = [...this.data.selectedDishes];
+
+      // 检查是否已存在
+      const existingIndex = selectedDishes.findIndex(item => item.id === dish.id);
+      if (existingIndex > -1) {
+        // 如果已存在，增加数量
+        selectedDishes[existingIndex].quantity += 1;
+      } else {
+        // 如果不存在，添加新菜品
+        selectedDishes.push({
+          ...dish,
+          quantity: 1
+        });
+      }
+
       this.setData({
-        "userInfo.nickName": nickName,
-        hasUserInfo: nickName && avatarUrl && avatarUrl !== defaultAvatarUrl,
-      })
+        selectedDishes,
+        showCart: true
+      });
+
+      this.calculateTotalPrice();
+
+      wx.showToast({
+        title: '已添加到菜单',
+        icon: 'success'
+      });
     },
-    getUserProfile() {
-      // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
-      wx.getUserProfile({
-        desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
-        success: (res) => {
-          console.log(res)
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
+
+    // 计算总价
+    calculateTotalPrice() {
+      // 简单的价格计算（Mock）
+      const totalPrice = this.data.selectedDishes.reduce((total, dish) => {
+        return total + (dish.prepTime * 2); // 假设每分钟准备时间价值2元
+      }, 0);
+
+      this.setData({
+        totalPrice
+      });
+    },
+
+    // 显示/隐藏购物车
+    toggleCart() {
+      this.setData({
+        showCart: !this.data.showCart
+      });
+    },
+
+    // 确认点餐
+    confirmOrder() {
+      if (this.data.selectedDishes.length === 0) {
+        wx.showToast({
+          title: '请先选择菜品',
+          icon: 'none'
+        });
+        return;
+      }
+
+      // 保存订单到本地
+      const orders = wx.getStorageSync('orders') || [];
+      const newOrder = {
+        id: Date.now(),
+        dishes: this.data.selectedDishes,
+        totalPrice: this.data.totalPrice,
+        status: 'pending',
+        createdAt: new Date().toISOString()
+      };
+
+      orders.unshift(newOrder);
+      wx.setStorageSync('orders', orders);
+
+      // 清空购物车
+      this.setData({
+        selectedDishes: [],
+        showCart: false,
+        totalPrice: 0
+      });
+
+      wx.showModal({
+        title: '点餐成功',
+        content: '已收到宝贝的订单，大厨开始准备啦！',
+        showCancel: false,
+        success: () => {
+          // 可以跳转到订单详情页
         }
-      })
+      });
     },
-  },
-})
+
+    // 跳转到添加菜品页
+    goToAddDish() {
+      wx.navigateTo({
+        url: '/pages/add-dish/add-dish'
+      });
+    }
+  }
+});

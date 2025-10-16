@@ -1,0 +1,245 @@
+/* 个人中心页面样式 */
+
+.profile-container {
+  padding: 0 30rpx 40rpx;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 用户信息区域 */
+.user-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin: 30rpx 0;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.user-header {
+  display: flex;
+  align-items: center;
+  gap: 30rpx;
+}
+
+.user-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  border: 4rpx solid #667eea;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-text {
+  color: white;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-nickname {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.user-nickname text:first-child {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-role {
+  font-size: 24rpx;
+  color: #667eea;
+  background: #f0f4ff;
+  padding: 8rpx 16rpx;
+  border-radius: 20rpx;
+}
+
+.edit-btn {
+  background: transparent;
+  border: 2rpx solid #667eea;
+  color: #667eea;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.edit-nickname {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+
+.nickname-input {
+  flex: 1;
+  border: 2rpx solid #ddd;
+  border-radius: 10rpx;
+  padding: 16rpx 20rpx;
+  font-size: 32rpx;
+}
+
+.save-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.cancel-btn {
+  background: #999;
+  color: white;
+  border: none;
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+/* 通用区域样式 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30rpx;
+}
+
+/* 统计数据区域 */
+.stats-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin: 30rpx 0;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30rpx;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #667eea;
+  margin-bottom: 10rpx;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 热门菜品区域 */
+.popular-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin: 30rpx 0;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.dish-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.dish-item {
+  display: flex;
+  align-items: center;
+  gap: 30rpx;
+  padding: 20rpx;
+  background: #f8f9fa;
+  border-radius: 15rpx;
+}
+
+.dish-rank {
+  width: 60rpx;
+  height: 60rpx;
+  background: #667eea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-weight: bold;
+}
+
+.dish-name {
+  flex: 1;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.dish-count {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 成就徽章区域 */
+.achievement-section {
+  background: white;
+  border-radius: 20rpx;
+  padding: 40rpx;
+  margin: 30rpx 0;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.05);
+}
+
+.achievement-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20rpx;
+}
+
+.achievement-item {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 16rpx 32rpx;
+  border-radius: 25rpx;
+  font-size: 26rpx;
+  font-weight: 500;
+}
+
+/* 操作区域 */
+.action-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  margin-top: 40rpx;
+}
+
+.logout-btn {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 30rpx;
+  font-size: 32rpx;
+}
+
+.clear-btn {
+  background: #999;
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 30rpx;
+  font-size: 32rpx;
+}
