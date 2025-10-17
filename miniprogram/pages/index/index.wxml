@@ -20,7 +20,7 @@
     </view>
 
     <view class="dishes-grid">
-      <view class="dish-card" wx:for="{{dishes}}" wx:key="id" bindtap="addToCart" data-dish="{{item}}">
+      <view class="dish-card" wx:for="{{dishes}}" wx:key="id" bindtap="viewDishDetail" data-dish="{{item}}">
         <view class="dish-image">
           <text class="dish-text">{{item.name}}</text>
         </view>
@@ -34,7 +34,7 @@
             <text class="dish-difficulty" wx:else>复杂</text>
           </view>
           <view class="dish-actions">
-            <text class="add-btn">+ 加入菜单</text>
+            <text class="add-btn" catchtap="addToCart" data-dish="{{item}}">+ 加入菜单</text>
           </view>
         </view>
       </view>

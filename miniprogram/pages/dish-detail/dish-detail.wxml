@@ -1,0 +1,179 @@
+<!-- 菜品详情页面 -->
+<view class="dish-detail-container" wx:if="{{dish}}">
+
+<!-- 加载状态 -->
+<view class="loading-container" wx:if="{{!dish}}">
+  <text class="loading-text">加载中...</text>
+  <button class="test-btn" bindtap="testLoadDish">测试加载菜品</button>
+  <text class="test-info" wx:if="{{testDishId}}">测试菜品ID: {{testDishId}}</text>
+</view>
+  <!-- 菜品基本信息 -->
+  <view class="basic-info-section">
+    <view class="dish-header">
+      <view class="dish-image-placeholder">
+        <text class="dish-text">{{dish.name}}</text>
+      </view>
+      <view class="dish-meta">
+        <view class="dish-name-row">
+          <text class="dish-name">{{dish.name}}</text>
+          <view class="dish-status">
+            <text class="status-badge {{dish.status}}">
+              {{dish.status === 'available' ? '可制作' : dish.status === 'learning' ? '学习中' : '暂停供应'}}
+            </text>
+          </view>
+        </view>
+        <text class="dish-description">{{dish.description}}</text>
+        <view class="dish-stats">
+          <view class="stat-item">
+            <text class="stat-label">分类</text>
+            <text class="stat-value">
+              {{dish.category === 'main' ? '主食' : dish.category === 'soup' ? '汤类' : dish.category === 'dessert' ? '甜点' : dish.category === 'drink' ? '饮料' : '小吃'}}
+            </text>
+          </view>
+          <view class="stat-item">
+            <text class="stat-label">难度</text>
+            <text class="stat-value">
+              {{dish.difficulty === 'easy' ? '简单' : dish.difficulty === 'medium' ? '中等' : '复杂'}}
+            </text>
+          </view>
+          <view class="stat-item">
+            <text class="stat-label">时间</text>
+            <text class="stat-value">{{dish.prepTime}}分钟</text>
+          </view>
+          <view class="stat-item">
+            <text class="stat-label">制作次数</text>
+            <text class="stat-value">{{dish.cookCount}}次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 编辑模式 -->
+  <view class="edit-section" wx:if="{{isEditing}}">
+    <view class="form-group">
+      <text class="form-label">菜品名称</text>
+      <input
+        class="form-input"
+        value="{{editDish.name}}"
+        bindinput="onEditInput"
+        data-field="name"
+      />
+    </view>
+
+    <view class="form-group">
+      <text class="form-label">菜品描述</text>
+      <textarea
+        class="form-textarea"
+        value="{{editDish.description}}"
+        bindinput="onEditInput"
+        data-field="description"
+      />
+    </view>
+
+    <view class="form-row">
+      <view class="form-group half-width">
+        <text class="form-label">分类</text>
+        <picker
+          class="form-picker"
+          range="{{['主食', '汤类', '甜点', '饮料', '小吃']}}"
+          value="{{['main', 'soup', 'dessert', 'drink', 'snack'].indexOf(editDish.category)}}"
+          bindchange="onCategoryChange"
+        >
+          <view class="picker-text">
+            {{editDish.category === 'main' ? '主食' : editDish.category === 'soup' ? '汤类' : editDish.category === 'dessert' ? '甜点' : editDish.category === 'drink' ? '饮料' : '小吃'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-group half-width">
+        <text class="form-label">难度</text>
+        <picker
+          class="form-picker"
+          range="{{['简单', '中等', '复杂']}}"
+          value="{{['easy', 'medium', 'hard'].indexOf(editDish.difficulty)}}"
+          bindchange="onDifficultyChange"
+        >
+          <view class="picker-text">
+            {{editDish.difficulty === 'easy' ? '简单' : editDish.difficulty === 'medium' ? '中等' : '复杂'}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="form-row">
+      <view class="form-group half-width">
+        <text class="form-label">状态</text>
+        <picker
+          class="form-picker"
+          range="{{['可制作', '学习中', '暂停供应']}}"
+          value="{{['available', 'learning', 'paused'].indexOf(editDish.status)}}"
+          bindchange="onStatusChange"
+        >
+          <view class="picker-text">
+            {{editDish.status === 'available' ? '可制作' : editDish.status === 'learning' ? '学习中' : '暂停供应'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-group half-width">
+        <text class="form-label">准备时间(分钟)</text>
+        <input
+          class="form-input"
+          type="number"
+          value="{{editDish.prepTime}}"
+          bindinput="onEditInput"
+          data-field="prepTime"
+        />
+      </view>
+    </view>
+
+    <view class="edit-actions">
+      <button class="cancel-edit-btn" bindtap="cancelEdit">取消</button>
+      <button class="save-edit-btn" bindtap="saveEdit">保存</button>
+    </view>
+  </view>
+
+  <!-- 食材清单 -->
+  <view class="section" wx:if="{{dish.ingredients && dish.ingredients.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">食材清单</text>
+    </view>
+    <view class="ingredients-list">
+      <view class="ingredient-item" wx:for="{{dish.ingredients}}" wx:key="index">
+        <view class="ingredient-info">
+          <text class="ingredient-name">{{item.name}}</text>
+          <text class="ingredient-amount">{{item.amount}}</text>
+        </view>
+        <text class="ingredient-category">
+          {{item.category === 'main' ? '主料' : item.category === 'side' ? '辅料' : '调料'}}
+        </text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 制作步骤 -->
+  <view class="section" wx:if="{{dish.steps && dish.steps.length > 0}}">
+    <view class="section-header">
+      <text class="section-title">制作步骤</text>
+    </view>
+    <view class="steps-list">
+      <view class="step-item" wx:for="{{dish.steps}}" wx:key="index">
+        <view class="step-number">{{index + 1}}</view>
+        <view class="step-content">
+          <text class="step-description">{{item.description}}</text>
+          <text class="step-tip" wx:if="{{item.tip}}">💡 {{item.tip}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons" wx:if="{{!isEditing}}">
+    <button class="add-to-cart-btn" bindtap="addToCart">加入菜单</button>
+    <view class="manage-buttons">
+      <button class="edit-btn" bindtap="startEdit">编辑</button>
+      <button class="delete-btn" bindtap="deleteDish">删除</button>
+    </view>
+  </view>
+</view>

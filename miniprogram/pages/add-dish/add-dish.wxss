@@ -1,0 +1,243 @@
+/* 添加菜品页面样式 */
+.add-dish-container {
+  padding: 20rpx;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* 表单部分 */
+.form-section {
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.form-group {
+  margin-bottom: 30rpx;
+}
+
+.form-row {
+  display: flex;
+  gap: 20rpx;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.form-label {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+  margin-bottom: 15rpx;
+  font-weight: 500;
+}
+
+.form-input {
+  width: 100%;
+  height: 80rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 12rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  background-color: #fafafa;
+}
+
+.form-input.small {
+  flex: 1;
+  height: 70rpx;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 120rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  font-size: 28rpx;
+  background-color: #fafafa;
+}
+
+.form-picker {
+  width: 100%;
+  height: 80rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 12rpx;
+  background-color: #fafafa;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+
+.form-picker.small {
+  flex: 1;
+  height: 70rpx;
+}
+
+.picker-text {
+  font-size: 28rpx;
+  color: #333;
+}
+
+/* 区域样式 */
+.section {
+  background: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.section-header {
+  margin-bottom: 25rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: 600;
+}
+
+/* 食材列表 */
+.ingredients-list {
+  margin-bottom: 25rpx;
+}
+
+.ingredient-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.ingredient-info {
+  flex: 1;
+}
+
+.ingredient-name {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+  margin-right: 15rpx;
+}
+
+.ingredient-amount {
+  font-size: 26rpx;
+  color: #666;
+  margin-right: 15rpx;
+}
+
+.ingredient-category {
+  font-size: 24rpx;
+  color: #999;
+  background-color: #f0f0f0;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+}
+
+/* 步骤列表 */
+.steps-list {
+  margin-bottom: 25rpx;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 25rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.step-number {
+  width: 50rpx;
+  height: 50rpx;
+  background-color: #667eea;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-weight: 600;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-description {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.5;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.step-tip {
+  font-size: 24rpx;
+  color: #667eea;
+  background-color: #f0f4ff;
+  padding: 8rpx 12rpx;
+  border-radius: 8rpx;
+  display: block;
+}
+
+/* 删除按钮 */
+.remove-btn {
+  color: #ff4757;
+  font-size: 24rpx;
+  padding: 8rpx 16rpx;
+  border: 1rpx solid #ff4757;
+  border-radius: 8rpx;
+  background-color: white;
+  margin-left: 15rpx;
+}
+
+/* 添加表单 */
+.add-ingredient-form,
+.add-step-form {
+  background-color: #f8f9fa;
+  padding: 25rpx;
+  border-radius: 12rpx;
+  border: 2rpx dashed #e0e0e0;
+}
+
+.add-btn {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 12rpx;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  margin-top: 15rpx;
+  width: 100%;
+}
+
+/* 操作按钮 */
+.action-buttons {
+  display: flex;
+  gap: 20rpx;
+  padding: 30rpx 0 50rpx;
+}
+
+.cancel-btn {
+  flex: 1;
+  background-color: #f8f9fa;
+  color: #666;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 12rpx;
+  padding: 25rpx;
+  font-size: 32rpx;
+}
+
+.save-btn {
+  flex: 1;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 12rpx;
+  padding: 25rpx;
+  font-size: 32rpx;
+}

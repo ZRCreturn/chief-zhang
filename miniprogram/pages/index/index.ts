@@ -39,6 +39,7 @@ Component({
     // 加载菜品数据
     loadDishes() {
       const dishes = getDishes();
+      console.log('加载的菜品数据:', dishes);
       this.setData({
         dishes
       });
@@ -138,6 +139,25 @@ Component({
     goToAddDish() {
       wx.navigateTo({
         url: '/pages/add-dish/add-dish'
+      });
+    },
+
+    // 查看菜品详情
+    viewDishDetail(e: any) {
+      const { dish } = e.currentTarget.dataset;
+      console.log('点击的菜品数据:', dish);
+      console.log('菜品ID:', dish?.id);
+
+      if (!dish || !dish.id) {
+        wx.showToast({
+          title: '菜品信息错误',
+          icon: 'none'
+        });
+        return;
+      }
+
+      wx.navigateTo({
+        url: `/pages/dish-detail/dish-detail?id=${dish.id}`
       });
     }
   }

@@ -1,0 +1,171 @@
+<!-- 添加菜品页面 -->
+<view class="add-dish-container">
+  <view class="form-section">
+    <view class="form-group">
+      <text class="form-label">菜品名称</text>
+      <input
+        class="form-input"
+        placeholder="请输入菜品名称"
+        value="{{dish.name}}"
+        bindinput="onNameInput"
+      />
+    </view>
+
+    <view class="form-group">
+      <text class="form-label">菜品描述</text>
+      <textarea
+        class="form-textarea"
+        placeholder="请输入菜品描述"
+        value="{{dish.description}}"
+        bindinput="onDescriptionInput"
+        maxlength="200"
+      />
+    </view>
+
+    <view class="form-row">
+      <view class="form-group half-width">
+        <text class="form-label">分类</text>
+        <picker
+          class="form-picker"
+          range="{{['主食', '汤类', '甜点', '饮料', '小吃']}}"
+          range-key=""
+          value="{{['main', 'soup', 'dessert', 'drink', 'snack'].indexOf(dish.category)}}"
+          bindchange="onCategoryChange"
+        >
+          <view class="picker-text">
+            {{dish.category === 'main' ? '主食' : dish.category === 'soup' ? '汤类' : dish.category === 'dessert' ? '甜点' : dish.category === 'drink' ? '饮料' : '小吃'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-group half-width">
+        <text class="form-label">难度</text>
+        <picker
+          class="form-picker"
+          range="{{['简单', '中等', '复杂']}}"
+          value="{{['easy', 'medium', 'hard'].indexOf(dish.difficulty)}}"
+          bindchange="onDifficultyChange"
+        >
+          <view class="picker-text">
+            {{dish.difficulty === 'easy' ? '简单' : dish.difficulty === 'medium' ? '中等' : '复杂'}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="form-row">
+      <view class="form-group half-width">
+        <text class="form-label">状态</text>
+        <picker
+          class="form-picker"
+          range="{{['可制作', '学习中', '暂停供应']}}"
+          value="{{['available', 'learning', 'paused'].indexOf(dish.status)}}"
+          bindchange="onStatusChange"
+        >
+          <view class="picker-text">
+            {{dish.status === 'available' ? '可制作' : dish.status === 'learning' ? '学习中' : '暂停供应'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-group half-width">
+        <text class="form-label">准备时间(分钟)</text>
+        <input
+          class="form-input"
+          type="number"
+          placeholder="30"
+          value="{{dish.prepTime}}"
+          bindinput="onPrepTimeInput"
+        />
+      </view>
+    </view>
+  </view>
+
+  <!-- 食材清单 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">食材清单</text>
+    </view>
+
+    <view class="ingredients-list">
+      <view class="ingredient-item" wx:for="{{dish.ingredients}}" wx:key="index">
+        <view class="ingredient-info">
+          <text class="ingredient-name">{{item.name}}</text>
+          <text class="ingredient-amount">{{item.amount}}</text>
+          <text class="ingredient-category">
+            {{item.category === 'main' ? '主料' : item.category === 'side' ? '辅料' : '调料'}}
+          </text>
+        </view>
+        <text class="remove-btn" bindtap="removeIngredient" data-index="{{index}}">删除</text>
+      </view>
+    </view>
+
+    <view class="add-ingredient-form">
+      <view class="form-row">
+        <input
+          class="form-input small"
+          placeholder="食材名称"
+          value="{{newIngredient.name}}"
+          bindinput="onIngredientNameInput"
+        />
+        <input
+          class="form-input small"
+          placeholder="用量"
+          value="{{newIngredient.amount}}"
+          bindinput="onIngredientAmountInput"
+        />
+        <picker
+          class="form-picker small"
+          range="{{['主料', '辅料', '调料']}}"
+          value="{{['main', 'side', 'seasoning'].indexOf(newIngredient.category)}}"
+          bindchange="onIngredientCategoryChange"
+        >
+          <view class="picker-text">
+            {{newIngredient.category === 'main' ? '主料' : newIngredient.category === 'side' ? '辅料' : '调料'}}
+          </view>
+        </picker>
+      </view>
+      <button class="add-btn" bindtap="addIngredient">添加食材</button>
+    </view>
+  </view>
+
+  <!-- 制作步骤 -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">制作步骤</text>
+    </view>
+
+    <view class="steps-list">
+      <view class="step-item" wx:for="{{dish.steps}}" wx:key="index">
+        <view class="step-number">{{index + 1}}</view>
+        <view class="step-content">
+          <text class="step-description">{{item.description}}</text>
+          <text class="step-tip" wx:if="{{item.tip}}">💡 {{item.tip}}</text>
+        </view>
+        <text class="remove-btn" bindtap="removeStep" data-index="{{index}}">删除</text>
+      </view>
+    </view>
+
+    <view class="add-step-form">
+      <textarea
+        class="form-textarea"
+        placeholder="请输入步骤描述"
+        value="{{newStep.description}}"
+        bindinput="onStepDescriptionInput"
+      />
+      <input
+        class="form-input"
+        placeholder="小贴士（可选）"
+        value="{{newStep.tip}}"
+        bindinput="onStepTipInput"
+      />
+      <button class="add-btn" bindtap="addStep">添加步骤</button>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="action-buttons">
+    <button class="cancel-btn" bindtap="cancel">取消</button>
+    <button class="save-btn" bindtap="saveDish">保存菜品</button>
+  </view>
+</view>
