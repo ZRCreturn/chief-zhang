@@ -59,18 +59,12 @@ backend/                  # Spring Boot后端 ✅ 已完成基础搭建
 ├── src/main/java/
 │   └── com/privatechef/
 │       ├── PrivateChefApplication.java  # 应用入口 ✅ 已完成
-│       ├── entity/       # 实体类 ✅ 已完成
-│       │   ├── User.java
-│       │   ├── Dish.java
-│       │   ├── DishIngredient.java
-│       │   ├── DishStep.java
-│       │   ├── Order.java
-│       │   ├── OrderItem.java
-│       │   └── DishRating.java
 │       ├── controller/   # API控制器
-│       ├── service/      # 业务逻辑
-│       ├── repository/   # 数据访问
-│       └── config/       # 配置类
+│       │   └── TestController.java      # 测试控制器 ✅ 已完成
+│       ├── entity/       # 实体类 ❌ 待开发
+│       ├── service/      # 业务逻辑 ❌ 待开发
+│       ├── repository/   # 数据访问 ❌ 待开发
+│       └── config/       # 配置类 ❌ 待开发
 ├── src/main/resources/
 │   ├── application.yml   # 应用配置 ✅ 已完成
 │   ├── schema.sql        # 数据库表结构 ✅ 已完成
@@ -624,14 +618,15 @@ logging:
 ### 🚀 后端开发状态
 - [x] **Spring Boot项目搭建** - 已完成
 - [x] **MySQL数据库配置** - 已完成
-- [x] **实体类设计** - 已完成（7个实体类）
 - [x] **数据库表结构** - 已完成（7张表）
 - [x] **测试数据初始化** - 已完成
 - [x] **应用配置** - 已完成
 - [x] **应用启动** - 已完成（端口8080）
+- [x] **基础Controller** - 已完成（TestController）
+- [ ] **实体类设计** - 待开发（7个实体类）
 - [ ] **Repository接口** - 待开发
 - [ ] **Service业务逻辑** - 待开发
-- [ ] **Controller API** - 待开发
+- [ ] **业务Controller API** - 待开发
 
 ### 📋 下一步开发计划
 1. **后端API开发阶段**
@@ -655,6 +650,53 @@ logging:
 - 需要按照CLAUDE.md规划逐步实现私厨点餐功能
 - TypeScript配置和项目结构已就绪，为后续开发提供良好基础
 
+## 🔍 后端实际代码状态 (2025-10-22)
+
+### ✅ 实际已完成的后端工作
+
+#### 1. Spring Boot项目基础搭建
+- ✅ **项目结构**：完整的Maven项目结构
+- ✅ **依赖配置**：pom.xml包含所有必需依赖
+  - Spring Boot 2.7.18
+  - MySQL Connector 8.0.33
+  - MyBatis Plus 3.5.3.1
+  - JWT认证
+  - Lombok
+  - Spring Security
+
+#### 2. 数据库配置
+- ✅ **数据库连接**：application.yml完整配置
+- ✅ **表结构**：schema.sql包含7张完整表结构
+- ✅ **测试数据**：data.sql包含丰富的测试数据
+
+#### 3. 应用配置
+- ✅ **应用入口**：PrivateChefApplication.java
+- ✅ **基础Controller**：TestController.java提供测试接口
+- ✅ **配置管理**：application.yml完整应用配置
+
+#### 4. 运行状态
+- ✅ **应用启动**：正常运行在端口8080
+- ✅ **数据库连接**：连接正常
+- ⚠️ **测试接口**：`/api/test/hello`和`/api/test/health`存在但需要认证（Spring Security默认配置）
+
+### ❌ 待开发的核心功能
+
+#### 1. 实体类层 (Entity)
+- ❌ **7个实体类**：User, Dish, DishIngredient, DishStep, Order, OrderItem, DishRating
+
+#### 2. 数据访问层 (Repository)
+- ❌ **Repository接口**：所有数据表的CRUD操作
+
+#### 3. 业务逻辑层 (Service)
+- ❌ **Service类**：业务逻辑处理
+
+#### 4. 控制器层 (Controller)
+- ❌ **业务Controller**：用户认证、菜品管理、订单管理等API
+
+#### 5. 配置类 (Config)
+- ❌ **安全配置**：Spring Security配置
+- ❌ **JWT配置**：认证过滤器配置
+
 ## 🚀 后端开发进展 (2025-10-21)
 
 ### ✅ 已完成的后端工作
@@ -676,13 +718,13 @@ logging:
 - ✅ **连接配置**：application.yml数据库连接配置完成
 
 #### 3. 实体类设计
-- ✅ **用户实体** (User) - 支持微信登录和角色管理
-- ✅ **菜品实体** (Dish) - 包含分类、难度、状态等
-- ✅ **食材实体** (DishIngredient) - 食材用量和分类
-- ✅ **步骤实体** (DishStep) - 制作步骤和小贴士
-- ✅ **订单实体** (Order) - 订单状态管理
-- ✅ **订单详情** (OrderItem) - 订单菜品关联
-- ✅ **评分实体** (DishRating) - 用户评分和评论
+- ❌ **用户实体** (User) - 支持微信登录和角色管理 - 待开发
+- ❌ **菜品实体** (Dish) - 包含分类、难度、状态等 - 待开发
+- ❌ **食材实体** (DishIngredient) - 食材用量和分类 - 待开发
+- ❌ **步骤实体** (DishStep) - 制作步骤和小贴士 - 待开发
+- ❌ **订单实体** (Order) - 订单状态管理 - 待开发
+- ❌ **订单详情** (OrderItem) - 订单菜品关联 - 待开发
+- ❌ **评分实体** (DishRating) - 用户评分和评论 - 待开发
 
 #### 4. 数据库初始化
 - ✅ **表结构创建**：schema.sql包含完整表结构
@@ -712,8 +754,8 @@ logging:
 cd backend
 mvn spring-boot:run
 
-# 检查状态
-curl http://localhost:8080/actuator/health
+# 检查应用是否运行
+curl -I http://localhost:8080
 
 # 停止应用
 kill $(lsof -ti:8080)
@@ -731,3 +773,9 @@ kill $(lsof -ti:8080)
 // 在miniprogram/utils/api.ts中
 const BASE_URL = 'http://localhost:8080/api';
 ```
+
+### 🧪 可用测试接口
+- `GET /api/test/hello` - 测试接口，返回欢迎信息（需要认证）
+- `GET /api/test/health` - 健康检查接口（需要认证）
+
+**注意**：由于Spring Security默认配置，所有API接口都需要认证才能访问。
