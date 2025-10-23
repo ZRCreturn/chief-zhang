@@ -127,7 +127,7 @@ Component({
 
       wx.showModal({
         title: '点餐成功',
-        content: '已收到宝贝的订单，大厨开始准备啦！',
+        content: '已收到阳阳宝贝的订单，大厨开始准备啦！',
         showCancel: false,
         success: () => {
           // 可以跳转到订单详情页

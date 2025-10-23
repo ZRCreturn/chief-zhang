@@ -55,18 +55,28 @@ typings/                  # TypeScript类型定义
 ├── index.d.ts           # 自定义类型定义 ✅ 已完成
 └── types/               # 微信API类型定义
 
-backend/                  # Spring Boot后端（待开发）
+backend/                  # Spring Boot后端 ✅ 已完成基础搭建
 ├── src/main/java/
 │   └── com/privatechef/
+│       ├── PrivateChefApplication.java  # 应用入口 ✅ 已完成
+│       ├── entity/       # 实体类 ✅ 已完成
+│       │   ├── User.java
+│       │   ├── Dish.java
+│       │   ├── DishIngredient.java
+│       │   ├── DishStep.java
+│       │   ├── Order.java
+│       │   ├── OrderItem.java
+│       │   └── DishRating.java
 │       ├── controller/   # API控制器
 │       ├── service/      # 业务逻辑
 │       ├── repository/   # 数据访问
-│       ├── entity/       # 实体类
 │       └── config/       # 配置类
 ├── src/main/resources/
-│   ├── application.yml   # 应用配置
+│   ├── application.yml   # 应用配置 ✅ 已完成
+│   ├── schema.sql        # 数据库表结构 ✅ 已完成
+│   ├── data.sql          # 测试数据 ✅ 已完成
 │   └── static/          # 静态资源
-└── pom.xml              # Maven配置
+└── pom.xml              # Maven配置 ✅ 已完成
 ```
 
 ## 📱 MVP 产品设计
@@ -600,7 +610,7 @@ logging:
 
 ## 📊 当前开发进度
 
-### 🚧 框架搭建状态
+### 🚧 前端框架状态
 - [x] **用户认证相关数据类型定义** - 已完成
 - [x] **Mock API工具函数** - 已完成
 - [x] **登录页面组件** - 已完成
@@ -611,25 +621,113 @@ logging:
 - [ ] **菜品详情页面** - 待创建
 - [ ] **订单管理页面** - 待创建
 
+### 🚀 后端开发状态
+- [x] **Spring Boot项目搭建** - 已完成
+- [x] **MySQL数据库配置** - 已完成
+- [x] **实体类设计** - 已完成（7个实体类）
+- [x] **数据库表结构** - 已完成（7张表）
+- [x] **测试数据初始化** - 已完成
+- [x] **应用配置** - 已完成
+- [x] **应用启动** - 已完成（端口8080）
+- [ ] **Repository接口** - 待开发
+- [ ] **Service业务逻辑** - 待开发
+- [ ] **Controller API** - 待开发
+
 ### 📋 下一步开发计划
-1. **第一阶段：前端框架搭建**
-   - 创建项目目录结构
-   - 定义核心数据类型
-   - 实现三个主要页面基础组件
-   - 配置应用路由和导航
+1. **后端API开发阶段**
+   - 创建Repository数据访问层
+   - 实现Service业务逻辑层
+   - 开发Controller REST API接口
 
-2. **第二阶段：核心功能开发**
-   - 首页菜品展示和购物车
-   - 添加菜品表单功能
-   - 个人中心数据展示
+2. **前端功能完善阶段**
+   - 添加菜品页面开发
+   - 菜品详情页面开发
+   - 订单管理页面开发
 
-3. **第三阶段：后端集成**
+3. **前后端集成阶段**
    - API接口对接
    - 数据持久化
-   - 用户认证
+   - 用户认证集成
 
 ### 🔧 当前代码状态
 - 项目目前基于微信小程序TypeScript模板
 - 只有基础的index和logs页面
 - 需要按照CLAUDE.md规划逐步实现私厨点餐功能
 - TypeScript配置和项目结构已就绪，为后续开发提供良好基础
+
+## 🚀 后端开发进展 (2025-10-21)
+
+### ✅ 已完成的后端工作
+
+#### 1. Spring Boot项目搭建
+- ✅ **项目结构创建**：完整的Maven项目结构
+- ✅ **依赖配置**：pom.xml包含所有必需依赖
+  - Spring Boot 2.7.18
+  - MySQL Connector 8.0.33
+  - MyBatis Plus 3.5.3.1
+  - JWT认证
+  - Lombok
+  - Spring Security
+
+#### 2. 数据库配置
+- ✅ **MySQL安装**：MySQL 9.4.0已安装并配置
+- ✅ **数据库创建**：private_chef数据库已创建
+- ✅ **用户配置**：privatechef用户已创建并授权
+- ✅ **连接配置**：application.yml数据库连接配置完成
+
+#### 3. 实体类设计
+- ✅ **用户实体** (User) - 支持微信登录和角色管理
+- ✅ **菜品实体** (Dish) - 包含分类、难度、状态等
+- ✅ **食材实体** (DishIngredient) - 食材用量和分类
+- ✅ **步骤实体** (DishStep) - 制作步骤和小贴士
+- ✅ **订单实体** (Order) - 订单状态管理
+- ✅ **订单详情** (OrderItem) - 订单菜品关联
+- ✅ **评分实体** (DishRating) - 用户评分和评论
+
+#### 4. 数据库初始化
+- ✅ **表结构创建**：schema.sql包含完整表结构
+- ✅ **测试数据**：data.sql包含丰富的测试数据
+  - 2个用户（大厨和宝贝）
+  - 6道菜品（红烧肉、西红柿鸡蛋等）
+  - 完整的食材清单和制作步骤
+  - 3个订单记录
+  - 用户评分和评论
+
+#### 5. 应用配置
+- ✅ **Spring Boot配置**：application.yml完整配置
+- ✅ **数据库连接池**：HikariCP配置
+- ✅ **JPA配置**：Hibernate自动建表
+- ✅ **安全配置**：Spring Security基础配置
+- ✅ **日志配置**：文件日志和调试级别
+
+### 🎯 当前运行状态
+- **应用状态**：✅ 正常运行在端口8080
+- **数据库连接**：✅ 连接正常
+- **表结构**：✅ 7张表已创建
+- **测试数据**：✅ 完整数据已插入
+
+### 🔄 运行命令
+```bash
+# 启动应用
+cd backend
+mvn spring-boot:run
+
+# 检查状态
+curl http://localhost:8080/actuator/health
+
+# 停止应用
+kill $(lsof -ti:8080)
+```
+
+### 📋 下一步开发计划
+1. **创建Repository接口** - 数据访问层
+2. **实现Service业务逻辑** - 业务处理层
+3. **开发Controller API** - REST接口层
+4. **前端API集成** - 小程序对接后端
+
+### 🔗 前端连接配置
+在前端代码中配置API基础URL：
+```typescript
+// 在miniprogram/utils/api.ts中
+const BASE_URL = 'http://localhost:8080/api';
+```
