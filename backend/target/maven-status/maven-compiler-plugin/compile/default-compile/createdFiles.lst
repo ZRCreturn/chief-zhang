@@ -1,2 +1,3 @@
 com/privatechef/PrivateChefApplication.class
+com/privatechef/config/SecurityConfig.class
 com/privatechef/controller/TestController.class
