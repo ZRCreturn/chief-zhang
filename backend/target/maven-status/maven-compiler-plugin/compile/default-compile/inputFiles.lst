@@ -1,3 +1,9 @@
 /Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/config/SecurityConfig.java
+/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/repository/UserRepository.java
+/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/service/UserService.java
 /Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/controller/TestController.java
+/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/entity/User.java
+/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/config/JwtAuthenticationFilter.java
+/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/util/JwtUtil.java
 /Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/PrivateChefApplication.java
+/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/src/main/java/com/privatechef/controller/AuthController.java

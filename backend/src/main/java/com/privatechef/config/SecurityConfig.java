@@ -1,15 +1,20 @@
 package com.privatechef.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
+    @Autowired
+    private JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
@@ -21,15 +26,16 @@ public class SecurityConfig {
             .and()
             // 配置授权规则
             .authorizeHttpRequests(auth -> auth
-                // 允许公开访问测试端点
+                // 允许公开访问认证和测试端点
+                .antMatchers("/api/auth/**").permitAll()
                 .antMatchers("/api/test/**").permitAll()
                 // 允许公开访问健康检查端点
                 .antMatchers("/actuator/health").permitAll()
                 // 其他所有请求都需要认证
                 .anyRequest().authenticated()
             )
-            // 配置HTTP Basic认证
-            .httpBasic();
+            // 添加JWT认证过滤器
+            .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

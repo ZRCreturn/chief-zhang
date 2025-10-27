@@ -1,3 +1,12 @@
 com/privatechef/PrivateChefApplication.class
+com/privatechef/controller/AuthController.class
 com/privatechef/config/SecurityConfig.class
+com/privatechef/repository/UserRepository.class
+com/privatechef/entity/User.class
+com/privatechef/controller/AuthController$LoginRequest.class
+com/privatechef/entity/User$UserRole.class
+com/privatechef/controller/AuthController$UpdateProfileRequest.class
 com/privatechef/controller/TestController.class
+com/privatechef/config/JwtAuthenticationFilter.class
+com/privatechef/util/JwtUtil.class
+com/privatechef/service/UserService.class

@@ -1,66 +1,35 @@
-2025-10-24 03:17:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m15s964ms).
-2025-10-24 10:00:31 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m16s25ms).
-2025-10-24 10:08:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m11s374ms).
-2025-10-24 10:50:55 - Securing GET /api/test/hello
-2025-10-24 10:50:55 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 10:50:55 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 10:50:55 - Secured GET /api/test/hello
-2025-10-24 10:50:55 - Cleared SecurityContextHolder to complete request
-2025-10-24 11:12:24 - Securing GET /api/test/hello
-2025-10-24 11:12:24 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 11:12:24 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 11:12:24 - Secured GET /api/test/hello
-2025-10-24 11:12:24 - Cleared SecurityContextHolder to complete request
-2025-10-24 11:12:25 - Securing GET /api/test/health
-2025-10-24 11:12:25 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 11:12:25 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 11:12:25 - Secured GET /api/test/health
-2025-10-24 11:12:25 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:12 - Securing GET /
-2025-10-24 12:03:12 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:12 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:12 - Request requested invalid session id FC9D4409E849F94091138725564A75B7
-2025-10-24 12:03:12 - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2025-10-24 12:03:12 - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4db3cdc3
-2025-10-24 12:03:12 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:12 - Securing GET /error
-2025-10-24 12:03:12 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:12 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:12 - Secured GET /error
-2025-10-24 12:03:12 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:14 - Securing GET /
-2025-10-24 12:03:14 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:14 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:14 - Request requested invalid session id FC9D4409E849F94091138725564A75B7
-2025-10-24 12:03:14 - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2025-10-24 12:03:14 - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4db3cdc3
-2025-10-24 12:03:14 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:14 - Securing GET /error
-2025-10-24 12:03:14 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:14 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:14 - Secured GET /error
-2025-10-24 12:03:14 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:19 - Securing GET /
-2025-10-24 12:03:19 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:19 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:19 - Request requested invalid session id FC9D4409E849F94091138725564A75B7
-2025-10-24 12:03:19 - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2025-10-24 12:03:19 - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4db3cdc3
-2025-10-24 12:03:19 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:19 - Securing GET /error
-2025-10-24 12:03:19 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:19 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:19 - Secured GET /error
-2025-10-24 12:03:19 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:20 - Securing GET /
-2025-10-24 12:03:20 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:20 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:20 - Request requested invalid session id FC9D4409E849F94091138725564A75B7
-2025-10-24 12:03:20 - Trying to match using RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]
-2025-10-24 12:03:20 - No match found. Using default entry point org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint@4db3cdc3
-2025-10-24 12:03:20 - Cleared SecurityContextHolder to complete request
-2025-10-24 12:03:20 - Securing GET /error
-2025-10-24 12:03:20 - Set SecurityContextHolder to empty SecurityContext
-2025-10-24 12:03:20 - Set SecurityContextHolder to anonymous SecurityContext
-2025-10-24 12:03:20 - Secured GET /error
-2025-10-24 12:03:20 - Cleared SecurityContextHolder to complete request
+2025-10-27 00:08:31 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m19s299ms).
+2025-10-27 00:24:32 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s355ms).
+2025-10-27 00:40:05 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m32s477ms).
+2025-10-27 00:56:30 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s745ms).
+2025-10-27 01:12:25 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s20ms).
+2025-10-27 01:28:51 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s696ms).
+2025-10-27 01:44:46 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s9ms).
+2025-10-27 02:01:12 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s768ms).
+2025-10-27 02:17:08 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s703ms).
+2025-10-27 02:33:34 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s835ms).
+2025-10-27 02:49:29 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s712ms).
+2025-10-27 03:01:35 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m35s729ms).
+2025-10-27 03:34:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m2s598ms).
+2025-10-27 04:06:59 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m20s994ms).
+2025-10-27 05:12:56 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m57s343ms).
+2025-10-27 05:47:30 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m34s582ms).
+2025-10-27 06:03:22 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m51s333ms).
+2025-10-27 06:19:48 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s831ms).
+2025-10-27 06:26:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m26s539ms).
+2025-10-27 06:42:40 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s749ms).
+2025-10-27 06:59:06 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s828ms).
+2025-10-27 07:15:32 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s788ms).
+2025-10-27 07:27:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m6s571ms).
+2025-10-27 07:43:34 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s820ms).
+2025-10-27 08:00:00 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s776ms).
+2025-10-27 08:16:09 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m38s992ms).
+2025-10-27 08:21:36 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m27s429ms).
+2025-10-27 08:28:26 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m50s257ms).
+2025-10-27 08:44:52 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s674ms).
+2025-10-27 09:00:48 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s738ms).
+2025-10-27 09:17:14 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s650ms).
+2025-10-27 09:29:28 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m14s274ms).
+2025-10-27 10:00:28 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m30s366ms).
+2025-10-27 10:11:09 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m40s712ms).
+2025-10-27 10:14:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s642ms).
