@@ -14,7 +14,7 @@ public class TestController {
     @GetMapping("/hello")
     public Map<String, String> hello() {
         Map<String, String> response = new HashMap<>();
-        response.put("message", "Hello from Private Chef Backend!");
+        response.put("message", "阳阳bb天天开心！");
         response.put("status", "success");
         response.put("timestamp", java.time.Instant.now().toString());
         return response;

@@ -1,35 +1,163 @@
-2025-10-27 00:08:31 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m19s299ms).
-2025-10-27 00:24:32 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m31s355ms).
-2025-10-27 00:40:05 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m32s477ms).
-2025-10-27 00:56:30 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s745ms).
-2025-10-27 01:12:25 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s20ms).
-2025-10-27 01:28:51 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s696ms).
-2025-10-27 01:44:46 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s9ms).
-2025-10-27 02:01:12 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s768ms).
-2025-10-27 02:17:08 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s703ms).
-2025-10-27 02:33:34 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s835ms).
-2025-10-27 02:49:29 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s712ms).
-2025-10-27 03:01:35 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=11m35s729ms).
-2025-10-27 03:34:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m2s598ms).
-2025-10-27 04:06:59 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m20s994ms).
-2025-10-27 05:12:56 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h5m57s343ms).
-2025-10-27 05:47:30 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=34m34s582ms).
-2025-10-27 06:03:22 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m51s333ms).
-2025-10-27 06:19:48 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s831ms).
-2025-10-27 06:26:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m26s539ms).
-2025-10-27 06:42:40 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s749ms).
-2025-10-27 06:59:06 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s828ms).
-2025-10-27 07:15:32 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s788ms).
-2025-10-27 07:27:38 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m6s571ms).
-2025-10-27 07:43:34 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s820ms).
-2025-10-27 08:00:00 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s776ms).
-2025-10-27 08:16:09 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m38s992ms).
-2025-10-27 08:21:36 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m27s429ms).
-2025-10-27 08:28:26 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m50s257ms).
-2025-10-27 08:44:52 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s674ms).
-2025-10-27 09:00:48 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s738ms).
-2025-10-27 09:17:14 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s650ms).
-2025-10-27 09:29:28 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m14s274ms).
-2025-10-27 10:00:28 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m30s366ms).
-2025-10-27 10:11:09 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m40s712ms).
-2025-10-27 10:14:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m34s642ms).
+2025-11-02 00:11:56 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s63ms).
+2025-11-02 00:30:54 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s119ms).
+2025-11-02 00:50:52 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s958ms).
+2025-11-02 01:07:20 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s816ms).
+2025-11-02 01:23:18 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s470ms).
+2025-11-02 01:39:17 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s372ms).
+2025-11-02 01:54:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s691ms).
+2025-11-02 02:11:13 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s513ms).
+2025-11-02 02:27:11 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s3ms).
+2025-11-02 02:42:39 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s925ms).
+2025-11-02 02:58:37 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s919ms).
+2025-11-02 03:00:16 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m39s703ms).
+2025-11-02 03:09:11 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m24s247ms).
+2025-11-02 03:25:09 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s934ms).
+2025-11-02 03:40:37 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s997ms).
+2025-11-02 03:56:35 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s616ms).
+2025-11-02 04:12:33 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s819ms).
+2025-11-02 04:28:31 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s676ms).
+2025-11-02 04:44:29 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s999ms).
+2025-11-02 05:00:26 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s607ms).
+2025-11-02 05:16:24 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s44ms).
+2025-11-02 05:31:53 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s519ms).
+2025-11-02 05:47:51 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s802ms).
+2025-11-02 06:03:49 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s784ms).
+2025-11-02 06:19:46 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s882ms).
+2025-11-02 06:35:44 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s1ms).
+2025-11-02 06:39:08 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m23s946ms).
+2025-11-02 06:55:07 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s99ms).
+2025-11-02 07:10:34 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s952ms).
+2025-11-02 07:26:32 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s938ms).
+2025-11-02 07:43:03 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s115ms).
+2025-11-02 07:59:00 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s698ms).
+2025-11-02 08:14:58 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s888ms).
+2025-11-02 08:30:26 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s986ms).
+2025-11-02 08:46:24 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s13ms).
+2025-11-02 09:02:23 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m28s382ms).
+2025-11-02 09:17:51 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s987ms).
+2025-11-02 09:33:48 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s866ms).
+2025-11-02 09:45:15 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m56s943ms).
+2025-11-02 09:52:29 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m43s783ms).
+2025-11-02 14:02:00 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m27s854ms).
+2025-11-02 14:03:08 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m7s603ms).
+2025-11-02 14:07:21 - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m13s565ms).
+2025-11-02 14:25:37 - Starting PrivateChefApplication using Java 24.0.1 on MBP-GTDRHKWGHF-2226.local with PID 99320 (/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/target/classes started by ruichen in /Users/ruichen/Documents/Codes/zrc/chief-zhang/backend)
+2025-11-02 14:25:37 - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-02 14:25:37 - No active profile set, falling back to 1 default profile: "default"
+2025-11-02 14:25:37 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02 14:25:37 - Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
+2025-11-02 14:25:37 - Skipping MapperFactoryBean with name 'userRepository' and 'com.privatechef.repository.UserRepository' mapperInterface. Bean already defined with the same name!
+2025-11-02 14:25:37 - No MyBatis mapper was found in '[com.privatechef.repository]' package. Please check your configuration.
+2025-11-02 14:25:37 - Tomcat initialized with port(s): 8080 (http)
+2025-11-02 14:25:37 - Starting service [Tomcat]
+2025-11-02 14:25:37 - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-02 14:25:37 - Initializing Spring embedded WebApplicationContext
+2025-11-02 14:25:37 - Root WebApplicationContext: initialization completed in 434 ms
+2025-11-02 14:25:37 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02 14:25:37 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-02 14:25:37 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-02 14:25:37 - HikariPool-1 - Starting...
+2025-11-02 14:25:38 - HikariPool-1 - Start completed.
+2025-11-02 14:25:38 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-02 14:25:38 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-02 14:25:38 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02 14:25:38 - Filter 'jwtAuthenticationFilter' configured for use
+2025-11-02 14:25:38 - 
+
+Using generated security password: 55f7c7ff-f7c8-4230-9418-e025c1ef83a3
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-02 14:25:38 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8b1170f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69cb134, org.springframework.security.web.context.SecurityContextPersistenceFilter@1999e1f5, org.springframework.security.web.header.HeaderWriterFilter@22105c76, org.springframework.security.web.authentication.logout.LogoutFilter@39109603, com.privatechef.config.JwtAuthenticationFilter@7bfcc108, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77307b51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cca2e9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@125124ea, org.springframework.security.web.session.SessionManagementFilter@7d0df326, org.springframework.security.web.access.ExceptionTranslationFilter@1dac0784, org.springframework.security.web.access.intercept.AuthorizationFilter@1842dc39]
+2025-11-02 14:25:38 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02 14:25:38 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2025-11-02 14:25:38 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02 14:25:38 - HikariPool-1 - Shutdown initiated...
+2025-11-02 14:25:38 - HikariPool-1 - Shutdown completed.
+2025-11-02 14:25:38 - Stopping service [Tomcat]
+2025-11-02 14:25:38 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2025-11-02 14:25:38 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-11-02 14:25:52 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02 14:25:52 - HikariPool-1 - Shutdown initiated...
+2025-11-02 14:25:52 - HikariPool-1 - Shutdown completed.
+2025-11-02 14:26:11 - Starting PrivateChefApplication using Java 24.0.1 on MBP-GTDRHKWGHF-2226.local with PID 99407 (/Users/ruichen/Documents/Codes/zrc/chief-zhang/backend/target/classes started by ruichen in /Users/ruichen/Documents/Codes/zrc/chief-zhang/backend)
+2025-11-02 14:26:11 - Running with Spring Boot v2.7.18, Spring v5.3.31
+2025-11-02 14:26:11 - No active profile set, falling back to 1 default profile: "default"
+2025-11-02 14:26:11 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-02 14:26:12 - Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interfaces.
+2025-11-02 14:26:12 - Skipping MapperFactoryBean with name 'userRepository' and 'com.privatechef.repository.UserRepository' mapperInterface. Bean already defined with the same name!
+2025-11-02 14:26:12 - No MyBatis mapper was found in '[com.privatechef.repository]' package. Please check your configuration.
+2025-11-02 14:26:12 - Tomcat initialized with port(s): 8080 (http)
+2025-11-02 14:26:12 - Starting service [Tomcat]
+2025-11-02 14:26:12 - Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-11-02 14:26:12 - Initializing Spring embedded WebApplicationContext
+2025-11-02 14:26:12 - Root WebApplicationContext: initialization completed in 374 ms
+2025-11-02 14:26:12 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-02 14:26:12 - HHH000412: Hibernate ORM core version 5.6.15.Final
+2025-11-02 14:26:12 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-11-02 14:26:12 - HikariPool-1 - Starting...
+2025-11-02 14:26:12 - HikariPool-1 - Start completed.
+2025-11-02 14:26:12 - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-11-02 14:26:12 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-11-02 14:26:12 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02 14:26:12 - Filter 'jwtAuthenticationFilter' configured for use
+2025-11-02 14:26:12 - 
+
+Using generated security password: 8ef3a8d4-7872-44a8-a349-e79dec87e635
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-11-02 14:26:12 - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8b1170f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@69cb134, org.springframework.security.web.context.SecurityContextPersistenceFilter@1999e1f5, org.springframework.security.web.header.HeaderWriterFilter@22105c76, org.springframework.security.web.authentication.logout.LogoutFilter@39109603, com.privatechef.config.JwtAuthenticationFilter@7bfcc108, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77307b51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1cca2e9d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@125124ea, org.springframework.security.web.session.SessionManagementFilter@7d0df326, org.springframework.security.web.access.ExceptionTranslationFilter@1dac0784, org.springframework.security.web.access.intercept.AuthorizationFilter@1842dc39]
+2025-11-02 14:26:12 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-02 14:26:12 - Tomcat started on port(s): 8080 (http) with context path ''
+2025-11-02 14:26:12 - Started PrivateChefApplication in 6.214 seconds (JVM running for 6.33)
+2025-11-02 14:27:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-02 14:27:03 - Initializing Servlet 'dispatcherServlet'
+2025-11-02 14:27:03 - Completed initialization in 0 ms
+2025-11-02 14:27:03 - Securing HEAD /
+2025-11-02 14:27:03 - Set SecurityContextHolder to empty SecurityContext
+2025-11-02 14:27:03 - JWT Token未以Bearer开头
+2025-11-02 14:27:03 - Set SecurityContextHolder to anonymous SecurityContext
+2025-11-02 14:27:03 - Pre-authenticated entry point called. Rejecting access
+2025-11-02 14:27:03 - Cleared SecurityContextHolder to complete request
+2025-11-02 14:27:03 - Securing HEAD /error
+2025-11-02 14:27:03 - Set SecurityContextHolder to empty SecurityContext
+2025-11-02 14:27:03 - Set SecurityContextHolder to anonymous SecurityContext
+2025-11-02 14:27:03 - Secured HEAD /error
+2025-11-02 14:27:03 - Cleared SecurityContextHolder to complete request
+2025-11-02 14:27:07 - Securing HEAD /api/test/hello
+2025-11-02 14:27:07 - Set SecurityContextHolder to empty SecurityContext
+2025-11-02 14:27:07 - JWT Token未以Bearer开头
+2025-11-02 14:27:07 - Set SecurityContextHolder to anonymous SecurityContext
+2025-11-02 14:27:07 - Secured HEAD /api/test/hello
+2025-11-02 14:27:08 - Cleared SecurityContextHolder to complete request
+2025-11-02 14:27:29 - Securing HEAD /api/test/hello
+2025-11-02 14:27:29 - Set SecurityContextHolder to empty SecurityContext
+2025-11-02 14:27:29 - JWT Token未以Bearer开头
+2025-11-02 14:27:29 - Set SecurityContextHolder to anonymous SecurityContext
+2025-11-02 14:27:29 - Secured HEAD /api/test/hello
+2025-11-02 14:27:29 - Cleared SecurityContextHolder to complete request
+2025-11-02 14:28:46 - Securing GET /api/test/hello
+2025-11-02 14:28:46 - Set SecurityContextHolder to empty SecurityContext
+2025-11-02 14:28:46 - JWT Token未以Bearer开头
+2025-11-02 14:28:46 - Set SecurityContextHolder to anonymous SecurityContext
+2025-11-02 14:28:46 - Secured GET /api/test/hello
+2025-11-02 14:28:46 - Cleared SecurityContextHolder to complete request
+2025-11-02 15:08:31 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-02 15:08:31 - HikariPool-1 - Shutdown initiated...
+2025-11-02 15:08:31 - HikariPool-1 - Shutdown completed.
