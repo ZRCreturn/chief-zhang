@@ -6,13 +6,13 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKEND_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 ARTIFACT_ID="private-chef-backend"
-VERSION="1.0.0"
+VERSION="1.0.1"
 JAR_NAME="${ARTIFACT_ID}-${VERSION}.jar"
 JAR_PATH="${BACKEND_DIR}/target/${JAR_NAME}"
 
 REMOTE_USER="${REMOTE_USER:-root}"
 REMOTE_HOST="${REMOTE_HOST:-47.111.17.110}"
-REMOTE_PATH="${REMOTE_PATH:-/opt/private-chef/${JAR_NAME}}"
+REMOTE_PATH="${REMOTE_PATH:-${JAR_NAME}}"
 IDENTITY_FILE="${IDENTITY_FILE:-${HOME}/.ssh/id_rsa}"
 
 echo "==> Building backend jar (${JAR_NAME})"
